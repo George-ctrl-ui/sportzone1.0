@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc"],
+  "categories": { "correctness": "error" },
+  "env": { "browser": true, "node": true },
+  "globals": {
+    "Bun": "readonly",
+    "$state": "readonly",
+    "$derived": "readonly",
+    "$props": "readonly",
+    "$bindable": "readonly"
+  },
+  "ignorePatterns": ["archive/**", "dist/**", ".tools/**", "node_modules/**"],
+  "rules": { "typescript/no-explicit-any": "error" }
+}

@@ -1,0 +1,165 @@
+.booking-section {
+  background: var(--surface-court);
+  color: var(--text-on-court);
+}
+.booking-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: start;
+}
+.booking-copy h1 {
+  font-size: clamp(50px, 5.7vw, 76px);
+}
+.booking-copy p {
+  color: var(--text-court-muted);
+  max-width: 330px;
+  margin-top: 28px;
+}
+.booking-phone {
+  display: inline-flex;
+  padding-block: 12px;
+}
+.booking-phone span {
+  color: var(--text-court-muted);
+  font-size: 13px;
+}
+.booking-phone strong {
+  display: block;
+  color: var(--text-on-court);
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.booking-panel {
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  padding: 36px;
+  border-radius: 8px;
+}
+.booking-panel h2 {
+  margin-bottom: 28px;
+}
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.optional {
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+.form-control,
+.form-select {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  background-color: var(--surface-raised);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: 4px;
+  padding: 11px 12px;
+  font-size: 14px;
+}
+.form-control::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+.form-select {
+  padding-right: 32px;
+}
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--surface-raised);
+  color: var(--text-primary);
+  border-color: var(--focus-ring);
+  box-shadow: none;
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+textarea.form-control {
+  resize: vertical;
+}
+.booking-estimate {
+  margin-block: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+}
+.booking-estimate strong {
+  font-size: 19px;
+  font-weight: 600;
+}
+.booking-submit {
+  width: 100%;
+  justify-content: space-between;
+}
+.form-note {
+  font-size: 11px;
+  line-height: 1.6;
+  margin-top: 16px;
+}
+.form-error {
+  color: var(--danger-text);
+  background: var(--danger-bg);
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.booking-success {
+  padding-block: 40px;
+  min-height: 320px;
+}
+.booking-success > svg {
+  color: var(--success-text);
+  margin-bottom: 20px;
+}
+.booking-success h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.booking-success p {
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+@media (max-width: 991px) {
+  .booking-layout {
+    gap: 40px;
+  }
+  .booking-panel {
+    padding: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .booking-copy h1 {
+    font-size: 58px;
+  }
+  .booking-panel {
+    padding: 24px 20px;
+  }
+}
+
+.booking-panel h2 {
+  font-family: var(--body-font);
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 600;
+}

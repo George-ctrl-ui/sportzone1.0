@@ -1,0 +1,230 @@
+@use 'scale' as *;
+
+.showcase {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  --focus-ring: var(--text-on-accent);
+}
+.showcase p {
+  color: inherit;
+}
+.showcase-layout {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: u(72);
+  align-items: start;
+}
+
+/* left index: stays put while the stories scroll past, one screen per category */
+.showcase-index {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding-top: var(--header-h);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.showcase-index h2 {
+  font-size: u(84);
+  margin-top: u(22);
+}
+.showcase-index nav {
+  display: grid;
+  margin-block: u(36) u(24);
+  gap: u(8);
+}
+.showcase-index nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: u(56);
+  padding: u(10) u(18);
+  font-size: u(21);
+  font-weight: 500;
+  transition:
+    background-color 220ms,
+    color 220ms;
+}
+.showcase-index nav a.current {
+  background: var(--surface-court);
+  color: var(--text-on-court);
+}
+.showcase-index nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.showcase-index .text-link {
+  gap: u(20);
+  font-size: u(16);
+  align-self: flex-start;
+}
+.showcase-index .section-eyebrow {
+  font-size: u(12.5);
+}
+.showcase-progress {
+  height: 2px;
+  background: color-mix(in srgb, var(--text-on-accent) 20%, transparent);
+  margin-bottom: u(24);
+}
+.showcase-progress span {
+  display: block;
+  height: 100%;
+  background: var(--text-on-accent);
+  transform-origin: left;
+}
+
+/* right column: every category fills the screen under the header, so
+   anchor jumps land exactly on its top edge */
+.showcase-stories {
+  min-width: 0;
+}
+.sport-story {
+  height: 100svh;
+  padding-block: calc(var(--header-h) + u(16)) u(32);
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: u(24);
+}
+.story-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  background: var(--surface-court);
+  border-radius: 4px;
+}
+.story-photo img {
+  width: 100%;
+  height: 112%;
+  margin-top: -6%;
+  object-fit: cover;
+}
+.story-photo-label {
+  position: absolute;
+  bottom: u(16);
+  left: u(16);
+  padding: u(8) u(16);
+  background: var(--surface-court);
+  color: var(--text-on-court);
+  font-size: u(12.5);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.story-info {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: u(32);
+  align-items: start;
+}
+.story-heading h3 {
+  font-family: var(--display-font);
+  font-size: u(56);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.story-intro p {
+  margin-top: u(10);
+  font-size: u(16);
+  line-height: 1.4;
+}
+.category-sports {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: u(14);
+}
+.category-sports li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: u(20);
+  align-items: center;
+}
+.category-sports h4 {
+  font-size: u(22);
+  font-weight: 600;
+  line-height: 1.2;
+}
+.category-sports li > div > span {
+  font-size: u(13);
+}
+.category-rate {
+  white-space: nowrap;
+  font-size: u(18);
+  font-weight: 600;
+}
+.category-rate small {
+  font-size: u(12.5);
+  font-weight: 400;
+}
+.category-book {
+  display: inline-flex;
+  min-height: u(44);
+  align-items: center;
+  gap: u(12);
+  font-size: u(15);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.showcase-status {
+  display: grid;
+  place-content: center;
+  height: 100svh;
+  gap: u(12);
+  font-size: u(18);
+}
+
+@media (orientation: portrait) {
+  .showcase-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .showcase-index {
+    position: static;
+    height: auto;
+    justify-content: flex-start;
+    padding-block: calc(var(--header-h) + u(20)) u(8);
+  }
+  .showcase-index h2 {
+    font-size: u(56);
+    margin-top: u(10);
+  }
+  .showcase-index nav {
+    display: flex;
+    gap: u(6) u(18);
+    margin-block: u(14) u(8);
+  }
+  .showcase-index nav a {
+    min-height: u(40);
+    padding: u(6) u(12);
+    font-size: u(16);
+    gap: u(10);
+  }
+  .showcase-index .text-link,
+  .showcase-progress {
+    display: none;
+  }
+  .sport-story {
+    height: auto;
+    min-height: 100svh;
+    padding-block: u(20) u(36);
+    grid-template-rows: u(300) auto;
+  }
+  .story-info {
+    grid-template-columns: 1fr;
+    gap: u(16);
+  }
+  .story-heading h3 {
+    font-size: u(44);
+  }
+  .category-sports h4 {
+    font-size: u(20);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .showcase-progress {
+    display: none;
+  }
+}

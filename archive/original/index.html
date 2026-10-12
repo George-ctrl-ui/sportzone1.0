@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Zone | Purok 2, San Francisco, Talibon, Bohol</title>
+    <meta name="description" content="Sports Zone athletic and recreation facility located in Purok 2, San Francisco, Talibon, Bohol. Basketball, badminton, volleyball, and pickleball court rentals, fitness, and community sports." />
+    <meta property="og:title" content="Sports Zone - Talibon, Bohol" />
+    <meta property="og:description" content="Community sports center located in Purok 2, San Francisco, Talibon, Bohol. Court rentals, coaching, and active living." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Link to custom stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Top Announcement Bar (Location, Hours, Phone) -->
+    <div class="top-bar" id="top-bar">
+      <div class="container top-bar-content">
+        <div class="top-bar-item">
+          <span class="top-icon">📍</span>
+          <span><strong>Location:</strong> Purok 2, San Francisco, Talibon, Bohol</span>
+        </div>
+        <div class="top-bar-group">
+          <div class="top-bar-item">
+            <span class="top-icon">⏰</span>
+            <span>Open Daily: 6:00 AM – 10:00 PM</span>
+          </div>
+          <div class="top-bar-item">
+            <span class="top-icon">📞</span>
+            <a href="tel:+639175557768">+63 (038) 512-9842 / 0917-555-7768</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 1. Header & Navigation -->
+    <header id="header">
+      <nav id="navbar" aria-label="Main Navigation">
+        <a href="#home" class="logo-link">
+          <div class="logo-group">
+            <h1 class="logo-text" id="logo">
+              <span>⚡</span>Sports Zone
+            </h1>
+            <span class="logo-subtext">San Francisco, Talibon, Bohol</span>
+          </div>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link" id="nav-home">Home</a></li>
+          <li><a href="#about" class="nav-link" id="nav-about">About Us</a></li>
+          <li><a href="#sports" class="nav-link" id="nav-sports">Sports & Rates</a></li>
+          <li><a href="#location" class="nav-link" id="nav-location">Location & Hours</a></li>
+          <li><a href="#gallery" class="nav-link" id="nav-gallery">Gallery</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact & Book</a></li>
+          <li class="nav-cta-item">
+            <a href="#contact" class="nav-cta-btn" id="nav-book-btn">Book a Court</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 2. Hero Section with Interactive Photo Slider -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <!-- Location badge in hero -->
+        <div class="hero-location-badge">
+          <span>📍 Purok 2, San Francisco, Talibon, Bohol</span>
+        </div>
+
+        <!-- Sliding Picture Carousel for Basketball, Badminton, Volleyball, Pickleball -->
+        <div class="slider-container" id="hero-slider">
+          <div class="slider-track" id="slider-track">
+            <!-- Slide 1: Basketball -->
+            <div class="slide active" data-index="0">
+              <img
+                src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80"
+                alt="Basketball court and game action at Sports Zone"
+                class="slide-img"
+                loading="eager"
+              />
+              <div class="slide-caption">
+                <span class="slide-badge">🏀 Basketball</span>
+                <p>Full-court tournaments, pickup games, and shooting practice in Talibon</p>
+              </div>
+            </div>
+
+            <!-- Slide 2: Badminton -->
+            <div class="slide" data-index="1">
+              <img
+                src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80"
+                alt="Badminton court and racket at Sports Zone"
+                class="slide-img"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <span class="slide-badge">🏸 Badminton</span>
+                <p>High-grade vinyl mats with non-glare LED lighting for competitive rallies</p>
+              </div>
+            </div>
+
+            <!-- Slide 3: Volleyball -->
+            <div class="slide" data-index="2">
+              <img
+                src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=1200&q=80"
+                alt="Volleyball net and match play at Sports Zone"
+                class="slide-img"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <span class="slide-badge">🏐 Volleyball</span>
+                <p>Regulation height nets, team practices, and exciting community matches</p>
+              </div>
+            </div>
+
+            <!-- Slide 4: Pickleball -->
+            <div class="slide" data-index="3">
+              <img
+                src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=1200&q=80"
+                alt="Pickleball paddle and court at Sports Zone"
+                class="slide-img"
+                loading="lazy"
+              />
+              <div class="slide-caption">
+                <span class="slide-badge">🏓 Pickleball</span>
+                <p>The fastest-growing paddle sport in Bohol for all ages and fitness levels</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Navigation Arrows -->
+          <button class="slider-btn prev-btn" id="slider-prev" aria-label="Previous sport image">‹</button>
+          <button class="slider-btn next-btn" id="slider-next" aria-label="Next sport image">›</button>
+
+          <!-- Slider Dot Indicators -->
+          <div class="slider-dots" id="slider-dots">
+            <button class="dot active" data-slide="0" aria-label="Slide 1: Basketball"></button>
+            <button class="dot" data-slide="1" aria-label="Slide 2: Badminton"></button>
+            <button class="dot" data-slide="2" aria-label="Slide 3: Volleyball"></button>
+            <button class="dot" data-slide="3" aria-label="Slide 4: Pickleball"></button>
+          </div>
+        </div>
+
+        <h2>Welcome to Sports Zone</h2>
+        <p class="hero-tagline">Your place for sports, fitness, and teamwork in Talibon, Bohol.</p>
+        
+        <div class="hero-buttons">
+          <a href="#sports" class="btn" id="hero-btn">Explore Sports</a>
+          <a href="#location" class="btn btn-secondary" id="hero-location-btn">View Location</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. About Section -->
+    <section id="about" class="section">
+      <div class="container about-content">
+        <h2 class="section-title">About Us</h2>
+        <p class="about-description">
+          <strong>Sports Zone</strong> is a community-driven athletic center located in <strong>Purok 2, San Francisco, Talibon, Bohol</strong>. Dedicated to promoting sports, fitness, teamwork, and a healthy lifestyle across Northern Bohol, we offer well-maintained indoor and outdoor courts, equipment rentals, youth training clinics, and organized weekend tournaments. Whether you are playing casual recreational games with friends or training competitively, our center provides a safe, welcoming, and energetic environment for athletes of all ages.
+        </p>
+
+        <!-- Feature cards demonstrating a real facility website -->
+        <div class="facility-features">
+          <div class="feature-item">
+            <span class="feature-icon">🏟️</span>
+            <h4>Regulation Courts</h4>
+            <p>Quality flooring with clear standard boundaries for basketball, badminton, volleyball, and pickleball.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">💡</span>
+            <h4>Night Floodlights</h4>
+            <p>Evenly distributed LED lighting system enabling safe, high-visibility play up to 10:00 PM nightly.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🚿</span>
+            <h4>Clean Facilities</h4>
+            <p>On-site locker changing rooms, clean restrooms, spectator benches, and cold drinking water refilling.</p>
+          </div>
+          <div class="feature-item">
+            <span class="feature-icon">🛡️</span>
+            <h4>Gear & Rentals</h4>
+            <p>Convenient ball and paddle rentals, tournament refereeing services, and first-aid support available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Sports Section -->
+    <section id="sports" class="section">
+      <div class="container">
+        <h2 class="section-title">Sports We Cover</h2>
+        <p class="section-subtitle">Choose your sport, gather your team, and book your court in Talibon.</p>
+        
+        <div class="sports-container" id="sports-grid">
+          <!-- Card 1: Basketball -->
+          <article class="sport-card" id="card-basketball">
+            <div class="sport-badge" aria-hidden="true">🏀</div>
+            <h3>Basketball</h3>
+            <p>
+              A high-energy, fast-paced court game that builds agility, precision shooting, vertical leap, and coordinated team play.
+            </p>
+            <div class="card-details">
+              <span class="detail-tag">Full & Half Court</span>
+              <span class="detail-rate">₱250 – ₱400 / hr</span>
+            </div>
+            <button type="button" class="btn-card-action select-sport-btn" data-sport="Basketball">
+              Inquire Basketball Court →
+            </button>
+          </article>
+
+          <!-- Card 2: Badminton -->
+          <article class="sport-card" id="card-badminton">
+            <div class="sport-badge" aria-hidden="true">🏸</div>
+            <h3>Badminton</h3>
+            <p>
+              An exhilarating racquet sport demanding rapid reflexes, swift footwork, sharp tactical smashes, and stamina on every rally.
+            </p>
+            <div class="card-details">
+              <span class="detail-tag">Indoor Vinyl Mat</span>
+              <span class="detail-rate">₱180 – ₱300 / hr</span>
+            </div>
+            <button type="button" class="btn-card-action select-sport-btn" data-sport="Badminton">
+              Inquire Badminton Court →
+            </button>
+          </article>
+
+          <!-- Card 3: Volleyball -->
+          <article class="sport-card" id="card-volleyball">
+            <div class="sport-badge" aria-hidden="true">🏐</div>
+            <h3>Volleyball</h3>
+            <p>
+              A classic dynamic sport emphasizing communication, quick set-and-spike combinations, defensive digs, and collective strategy.
+            </p>
+            <div class="card-details">
+              <span class="detail-tag">Standard Net Heights</span>
+              <span class="detail-rate">₱200 – ₱350 / hr</span>
+            </div>
+            <button type="button" class="btn-card-action select-sport-btn" data-sport="Volleyball">
+              Inquire Volleyball Court →
+            </button>
+          </article>
+
+          <!-- Card 4: Pickleball -->
+          <article class="sport-card" id="card-pickleball">
+            <div class="sport-badge" aria-hidden="true">🏓</div>
+            <h3>Pickleball</h3>
+            <p>
+              The rapidly growing paddle sport blending elements of tennis and badminton, perfect for social rallies, hand-eye coordination, and fun.
+            </p>
+            <div class="card-details">
+              <span class="detail-tag">Dedicated Non-Slip Court</span>
+              <span class="detail-rate">₱150 – ₱250 / hr</span>
+            </div>
+            <button type="button" class="btn-card-action select-sport-btn" data-sport="Pickleball">
+              Inquire Pickleball Court →
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Dedicated Location & Facility Hours Section -->
+    <section id="location" class="section location-section">
+      <div class="container">
+        <h2 class="section-title">Location & Facility Hours</h2>
+        <p class="section-subtitle">Easily visit our sports complex in San Francisco, Talibon, Bohol</p>
+
+        <div class="location-grid">
+          <!-- Address & Directions Details -->
+          <div class="location-info-card">
+            <div class="info-block">
+              <div class="info-icon">📍</div>
+              <div>
+                <h3>Official Center Address</h3>
+                <p class="address-text">
+                  <strong>Sports Zone Complex</strong><br />
+                  Purok 2, San Francisco, Talibon, Bohol, Philippines (ZIP 6325)
+                </p>
+                <p class="landmark-note">
+                  <em>Landmark:</em> Located along the San Francisco Barangay Road, easily accessible via tricycle, motorbike, or private vehicle from Talibon Town Proper (approx. 5 minutes).
+                </p>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-icon">⏰</div>
+              <div>
+                <h3>Operating Schedule</h3>
+                <ul class="hours-list">
+                  <li><span>Monday – Friday:</span> <strong>6:00 AM – 10:00 PM</strong></li>
+                  <li><span>Saturday – Sunday:</span> <strong>5:30 AM – 10:30 PM</strong></li>
+                  <li><span>Night Lighting Hours:</span> <strong>5:30 PM – 10:00 PM</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <div class="info-icon">📞</div>
+              <div>
+                <h3>Direct Contacts</h3>
+                <p>Landline: +63 (038) 512-9842</p>
+                <p>Mobile / SMS / Viber: +63 917 555 7768</p>
+                <p>Email: sportszone.talibon@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="location-actions">
+              <a
+                href="https://maps.google.com/?q=San+Francisco,+Talibon,+Bohol,+Philippines"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-directions"
+              >
+                🗺️ Open in Google Maps
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                📅 Reserve a Slot
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Map / Visual Guide Container -->
+          <div class="location-map-card">
+            <div class="map-header">
+              <span class="map-tag">San Francisco, Talibon, Bohol</span>
+              <span class="map-status">🟢 Open for Public & League Play</span>
+            </div>
+            
+            <div class="map-wrapper">
+              <iframe
+                title="Sports Zone Location Map in San Francisco, Talibon, Bohol"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31405.54148003612!2d124.3150!3d10.1450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9ec2b10df229f%3A0xb35a51980db45722!2sSan%20Francisco%2C%20Talibon%2C%20Bohol!5e0!3m2!1sen!2sph!4v1700000000000!5m2!1sen!2sph"
+                width="100%"
+                height="320"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div class="map-footer-notes">
+              <div class="note-pill">🚗 Free Customer Parking</div>
+              <div class="note-pill">🛵 Motorcycle Bays</div>
+              <div class="note-pill">💧 Water Refill Station</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Gallery Section -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title">Sports Gallery</h2>
+        <p class="section-subtitle">Click on any sport to see court specifications and quick details</p>
+        
+        <div class="gallery" id="gallery-grid">
+          <!-- Basketball Emoji Card -->
+          <div class="gallery-item" id="gallery-item-basketball" data-sport="Basketball">
+            <span class="gallery-emoji" role="img" aria-label="Basketball">🏀</span>
+            <span class="gallery-label">Basketball</span>
+            <span class="gallery-sub">Court 1 & 2</span>
+          </div>
+
+          <!-- Badminton Emoji Card -->
+          <div class="gallery-item" id="gallery-item-badminton" data-sport="Badminton">
+            <span class="gallery-emoji" role="img" aria-label="Badminton Shuttlecock">🏸</span>
+            <span class="gallery-label">Badminton</span>
+            <span class="gallery-sub">2 Non-Slip Mats</span>
+          </div>
+
+          <!-- Volleyball Emoji Card -->
+          <div class="gallery-item" id="gallery-item-volleyball" data-sport="Volleyball">
+            <span class="gallery-emoji" role="img" aria-label="Volleyball">🏐</span>
+            <span class="gallery-label">Volleyball</span>
+            <span class="gallery-sub">Indoor Court</span>
+          </div>
+
+          <!-- Ping Pong / Paddle Sports Emoji Card -->
+          <div class="gallery-item" id="gallery-item-paddle" data-sport="Pickleball">
+            <span class="gallery-emoji" role="img" aria-label="Paddle and Ping Pong Sports">🏓</span>
+            <span class="gallery-label">Pickleball</span>
+            <span class="gallery-sub">Outdoor Arena</span>
+          </div>
+        </div>
+
+        <!-- Sport Specs Info Box triggered dynamically -->
+        <div id="sport-info-box" class="sport-info-box">
+          <div class="info-box-header">
+            <h4 id="info-box-title">🏀 Basketball Court Specifications</h4>
+            <button id="info-box-close" class="info-box-close" aria-label="Close specifications">✕</button>
+          </div>
+          <p id="info-box-desc">
+            Standard court with breakaway rims, fiberglass backboards, shock-absorbing synthetic surface, and LED high-bay lights.
+          </p>
+          <div class="info-box-footer">
+            <span id="info-box-rate">Rate: ₱250 - ₱400 / hr</span>
+            <button class="btn btn-sm" id="info-box-book-btn">Book This Sport</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact & Court Reservation Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Contact & Court Reservation</h2>
+        <p class="section-subtitle">Inquire about court availability, schedule recurring games, or send a general message</p>
+
+        <div class="contact-layout">
+          <!-- Contact Details Summary Card -->
+          <div class="contact-summary-card">
+            <h3>Get in Touch</h3>
+            <p>Have questions about tournaments, membership, or booking multiple court hours in Talibon? We are here to help!</p>
+            
+            <div class="contact-card-list">
+              <div class="contact-card-row">
+                <span class="c-icon">📍</span>
+                <div>
+                  <strong>Location</strong>
+                  <p>Purok 2, San Francisco, Talibon, Bohol</p>
+                </div>
+              </div>
+              <div class="contact-card-row">
+                <span class="c-icon">📞</span>
+                <div>
+                  <strong>Hotlines</strong>
+                  <p>+63 (038) 512-9842<br />+63 917 555 7768</p>
+                </div>
+              </div>
+              <div class="contact-card-row">
+                <span class="c-icon">✉️</span>
+                <div>
+                  <strong>Email</strong>
+                  <p>sportszone.talibon@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-card-row">
+                <span class="c-icon">🕒</span>
+                <div>
+                  <strong>Facility Hours</strong>
+                  <p>Open 7 Days a week: 6:00 AM – 10:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact / Booking Form -->
+          <div class="contact-container">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name <span class="required">*</span></label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="e.g. Juan dela Cruz"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Mobile Number <span class="required">*</span></label>
+                  <input
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="e.g. 0917 123 4567"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="name@example.com"
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-sport" class="form-label">Sport / Facility <span class="required">*</span></label>
+                  <select id="contact-sport" name="sport" class="form-input form-select" required>
+                    <option value="">Select a Sport...</option>
+                    <option value="Basketball">🏀 Basketball Court</option>
+                    <option value="Badminton">🏸 Badminton Court</option>
+                    <option value="Volleyball">🏐 Volleyball Court</option>
+                    <option value="Pickleball">🏓 Pickleball Court</option>
+                    <option value="General Inquiry">ℹ️ General Facility Inquiry</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-date" class="form-label">Preferred Date</label>
+                  <input
+                    type="date"
+                    id="contact-date"
+                    name="date"
+                    class="form-input"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message / Time Preference <span class="required">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Let us know your preferred court time slot (e.g. 6:00 PM - 8:00 PM) or any equipment needs..."
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-submit">
+                Send Reservation Inquiry
+              </button>
+
+              <!-- Dynamic Interactive Feedback Container -->
+              <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+            </form>
+
+            <!-- Recent Inquiries Section stored in browser -->
+            <div id="recent-inquiries-container" class="recent-inquiries-container" style="display: none;">
+              <div class="recent-header">
+                <h5>📋 Your Recent Inquiries</h5>
+                <button id="clear-inquiries-btn" class="btn-text-clear" type="button">Clear</button>
+              </div>
+              <div id="recent-inquiries-list" class="recent-inquiries-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Footer -->
+    <footer id="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <div class="logo-text">
+            <span>⚡</span>Sports Zone
+          </div>
+          <p class="footer-tagline">
+            Your neighborhood center for sports, fitness, and team play in <strong>Purok 2, San Francisco, Talibon, Bohol</strong>.
+          </p>
+          <p class="footer-coords">
+            📍 Purok 2, San Francisco, Talibon, Bohol 6325 | 📞 +63 (038) 512-9842
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#sports">Sports & Rates</a></li>
+            <li><a href="#location">Location & Hours</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact & Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-sports">
+          <h4>Sports Offered</h4>
+          <ul>
+            <li>🏀 Basketball Court</li>
+            <li>🏸 Badminton Courts</li>
+            <li>🏐 Volleyball Arena</li>
+            <li>🏓 Pickleball Court</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 Sports Zone | Purok 2, San Francisco, Talibon, Bohol | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="./script.js"></script>
+  </body>
+</html>

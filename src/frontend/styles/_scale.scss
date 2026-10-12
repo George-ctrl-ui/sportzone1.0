@@ -1,0 +1,19 @@
+// Viewport-locked scale. Every home/chrome size is written as u(px at 1440×810).
+// Browser zoom changes vw/svh and the CSS-px viewport together, so layouts built on
+// --u look identical at any zoom level (same idea as the Lenis site).
+@function u($px) {
+  @return calc(#{$px} * var(--u));
+}
+
+:root {
+  --u: max(0.55px, min(100vw / 1440, 100svh / 810));
+  --header-h: #{u(92)};
+}
+
+// Zoom-proof "mobile": decided by aspect ratio, not by pixel width.
+@media (orientation: portrait) {
+  :root {
+    --u: max(0.55px, 100vw / 390);
+    --header-h: #{u(76)};
+  }
+}

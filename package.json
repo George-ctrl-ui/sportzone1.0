@@ -1,0 +1,45 @@
+{
+  "name": "sports-zone",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun scripts/dev.ts",
+    "dev:frontend": "bun --bun vite --host 127.0.0.1 --port 3000",
+    "dev:api": "bun scripts/php.ts",
+    "check": "bun check && bun run check:svelte",
+    "build": "bun run check && bun run parse && bun --bun vite build",
+    "preview": "bun --bun vite preview --host 127.0.0.1",
+    "start": "bun scripts/php.ts --production",
+    "test:api": "bun scripts/test-api.ts",
+    "test:production": "bun scripts/test-production.ts",
+    "check:svelte": "bun --bun svelte-check --tsgo --tsconfig ./tsconfig.json",
+    "lint": "bun --bun oxlint src/frontend scripts vite.config.ts svelte.config.js --deny-warnings",
+    "format": "bun --bun oxfmt --write .",
+    "format:check": "bun --bun oxfmt --check .",
+    "parse": "bun scripts/parse.ts",
+    "preview:catalog": "bun scripts/preview-catalog.ts",
+    "test:schema": "bun scripts/test-schema.ts",
+    "db:init": "bun scripts/init-db.ts"
+  },
+  "dependencies": {
+    "bootstrap": "6.0.0-alpha.1",
+    "gsap": "3.15.0",
+    "lenis": "2.0.0-dev.5",
+    "svelte": "5.57.2"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/bun": "1.4.3",
+    "@types/node": "26.6.5",
+    "@typescript/native": "npm:typescript@7.1.0-dev.20261011.1",
+    "oxc-parser": "0.153.0",
+    "oxfmt": "0.72.0",
+    "oxlint": "1.87.0",
+    "sass": "1.105.1",
+    "svelte-check": "4.7.6",
+    "typescript": "6.0.3",
+    "vite": "8.3.4"
+  },
+  "packageManager": "bun@1.4.3"
+}
